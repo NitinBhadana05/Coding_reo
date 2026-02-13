@@ -1,0 +1,21 @@
+Rotate Right by 1
+def rotate_right(arr: list[int]) -> list[int]:
+    
+    if not arr:
+        return []
+
+    result = [0] * len(arr)
+
+    for i in range(len(arr)):
+        new_index = (i + 1) % len(arr)
+        result[new_index] = arr[i]
+
+    return result
+    
+#example
+
+arr = [1, 2, 3, 4, 5]
+print(rotate_right(arr))
+
+Output:
+[5,1,2,3,4]

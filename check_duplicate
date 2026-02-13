@@ -1,0 +1,18 @@
+Check Duplicate (Brute Force)
+def duplicate(numbers: list[int]) -> bool:
+    
+    for i in range(len(numbers)):
+        for j in range(i + 1, len(numbers)):
+            if numbers[i] == numbers[j]:
+                return True
+
+    return False
+
+#example
+
+numbers = [1, 2, 3, 4,3,5, 5]
+print(duplicate(numbers))
+
+Output:
+
+True

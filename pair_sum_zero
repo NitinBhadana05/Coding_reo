@@ -1,0 +1,19 @@
+Pair Sum Zero (Basic logic)
+def check_sum_zero(numbers: list[int]) -> bool:
+    
+    for i in range(len(numbers)):
+        for j in range(i + 1, len(numbers)):
+            if numbers[i] + numbers[j] == 0:
+                return True
+
+    return False
+    
+ #example
+
+numbers = [1, 2, -2, 3, 4, 5]
+print(check_sum_zero(numbers))
+
+
+output:
+
+True

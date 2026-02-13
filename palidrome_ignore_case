@@ -1,0 +1,33 @@
+# Palindrome (Ignore case & spaces)
+
+def palindrome(string: str) -> bool:
+    
+    cleaned = ""
+
+    for char in string:
+        if char != " ":
+            if char >= 'A' and char <= 'Z':
+                cleaned += chr(ord(char) + 32)
+            else:
+                cleaned += char
+
+    left = 0
+    right = len(cleaned) - 1
+
+    while left < right:
+        if cleaned[left] != cleaned[right]:
+            return False
+        left += 1
+        right -= 1
+
+    return True
+
+#Example
+    
+string = "nitin"
+print(palindrome(string))
+    
+Output:
+   
+   True
+    
